@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Penetracja Ego</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#ffffff;
+ --text:#222;
+ --accent:#43306b;
+ --accent2:#6f5aa7;
+ --soft:#f6f4fb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ font-family:Inter,sans-serif;
+ color:var(--text);
+ background:white;
+ line-height:1.8;
+ overflow-x:hidden;
+}
+.container{width:min(1180px,92%);margin:auto}
+section{padding:110px 0;position:relative}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:500}
+h1{font-size:clamp(4rem,9vw,7rem);line-height:.95}
+h2{font-size:3rem;text-align:center;margin-bottom:20px}
+
+.hero{
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+}
+.hero-content{max-width:760px;position:relative;z-index:2}
+
+.mandala-bg{
+ position:absolute;
+ right:-150px;
+ top:50%;
+ transform:translateY(-50%);
+ width:700px;
+ height:700px;
+ opacity:.08;
+ z-index:0;
+}
+
+.frame{
+ position:absolute;
+ inset:40px;
+ border:1px solid rgba(67,48,107,.15);
+ pointer-events:none;
+}
+
+.subtitle{
+ color:var(--accent);
+ letter-spacing:4px;
+ text-transform:uppercase;
+ margin-bottom:20px;
+ font-size:.85rem;
+}
+
+.btn{
+ display:inline-block;
+ margin-top:35px;
+ padding:14px 28px;
+ border:1px solid var(--accent);
+ color:var(--accent);
+ text-decoration:none;
+}
+
+.separator{
+ text-align:center;
+ color:var(--accent2);
+ font-size:28px;
+ margin-bottom:20px;
+}
+
+.about{background:var(--soft)}
+
+.people{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+ gap:60px;
+ margin-top:50px;
+}
+
+.person{
+ text-align:center;
+ position:relative;
+}
+
+.photo-frame{
+ padding:14px;
+ border:1px solid rgba(67,48,107,.25);
+ border-radius:28px;
+ position:relative;
+}
+
+.photo-frame:before,
+.photo-frame:after{
+ content:"◈";
+ position:absolute;
+ color:var(--accent2);
+ font-size:18px;
+}
+
+.photo-frame:before{top:10px;left:10px}
+.photo-frame:after{bottom:10px;right:10px}
+
+.person img{
+ width:100%;
+ aspect-ratio:4/5;
+ object-fit:cover;
+ border-radius:18px;
+}
+
+.person h3{
+ font-size:2rem;
+ color:var(--accent);
+ margin-top:20px;
+}
+
+.cards{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ gap:30px;
+ margin-top:50px;
+}
+
+.card{
+ border:1px solid rgba(67,48,107,.15);
+ border-radius:24px;
+ padding:35px;
+}
+
+.card h3{
+ color:var(--accent);
+ margin-bottom:12px;
+}
+
+.quote{
+ background:var(--soft);
+ text-align:center;
+}
+
+.quote-text{
+ font-family:"Cormorant Garamond",serif;
+ font-size:2rem;
+ max-width:900px;
+ margin:auto;
+ color:var(--accent);
+}
+
+.contact-box{
+ max-width:700px;
+ margin:auto;
+ border:1px solid rgba(67,48,107,.15);
+ border-radius:24px;
+ padding:50px;
+ text-align:center;
+}
+
+.email{
+ color:var(--accent);
+ font-size:1.2rem;
+ margin-top:15px;
+}
+
+footer{
+ text-align:center;
+ padding:40px;
+ color:#777;
+}
+
+.intro{
+ text-align:center;
+ max-width:800px;
+ margin:0 auto;
+}
+
+@media(max-width:768px){
+ .mandala-bg{width:450px;height:450px;right:-180px}
+ .frame{display:none}
+ section{padding:80px 0}
+ h2{font-size:2.3rem}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="frame"></div>
+
+<svg class="mandala-bg" viewBox="0 0 500 500">
+<g fill="none" stroke="#43306b" stroke-width="1.2">
+<circle cx="250" cy="250" r="220"/>
+<circle cx="250" cy="250" r="180"/>
+<circle cx="250" cy="250" r="140"/>
+<circle cx="250" cy="250" r="100"/>
+<g>
+<line x1="250" y1="30" x2="250" y2="470"/>
+<line x1="30" y1="250" x2="470" y2="250"/>
+<line x1="95" y1="95" x2="405" y2="405"/>
+<line x1="405" y1="95" x2="95" y2="405"/>
+</g>
+</g>
+</svg>
+
+<div class="container">
+<div class="hero-content">
+<div class="separator">◈ ◇ ◈</div>
+<div class="subtitle">Sesje rozwoju duchowego</div>
+<h1>Penetracja<br>Ego</h1>
+<p>
+Towarzyszymy w procesie poznawania siebie, przekraczania ograniczających schematów i rozwijania głębszej świadomości.
+</p>
+<a class="btn" href="#kontakt">Skontaktuj się z nami</a>
+</div>
+</div>
+</section>
+
+<section class="about">
+<div class="container">
+<div class="separator">✧ ◈ ✧</div>
+<h2>Poznaj nas</h2>
+<p class="intro">
+Tworzymy wspólną przestrzeń do rozmowy, refleksji i świadomego rozwoju.
+</p>
+
+<div class="people">
+
+<div class="person">
+<div class="photo-frame">
+<img src="osoba1.jpg" alt="Osoba 1">
+</div>
+<h3>Imię i nazwisko</h3>
+<p>Uzupełnij opis pierwszej osoby.</p>
+</div>
+
+<div class="person">
+<div class="photo-frame">
+<img src="osoba2.jpg" alt="Osoba 2">
+</div>
+<h3>Imię i nazwisko</h3>
+<p>Uzupełnij opis drugiej osoby.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="separator">◈ ◇ ◈</div>
+<h2>Nasza oferta</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Sesje indywidualne</h3>
+<p>Praca z aktualnymi wyzwaniami i wewnętrznymi blokadami.</p>
+</div>
+
+<div class="card">
+<h3>Praca z cieniem</h3>
+<p>Odkrywanie ukrytych wzorców wpływających na codzienne życie.</p>
+</div>
+
+<div class="card">
+<h3>Rozwój świadomości</h3>
+<p>Pogłębianie kontaktu z własną intuicją i kierunkiem życiowym.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="quote">
+<div class="container">
+<div class="separator">✧ ◎ ✧</div>
+<div class="quote-text">
+„To, co próbujemy odrzucić, często zawiera klucz do naszego rozwoju.”
+</div>
+</div>
+</section>
+
+<section id="kontakt">
+<div class="container">
+<div class="separator">◈ ◇ ◈</div>
+<h2>Kontakt</h2>
+
+<div class="contact-box">
+<p>Jeżeli czujesz, że to właściwy moment, napisz do nas.</p>
+<div class="email">kontakt@penetracjaego.pl</div>
+<p>Instagram: @penetracjaego</p>
+</div>
+</div>
+</section>
+
+<footer>© Penetracja Ego</footer>
+
+</body>
+</html>
