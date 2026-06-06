@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Penetracja Ego</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--ink:#1f1d24;
+--violet:#47306f;
+--violet2:#7f6ab2;
+--mist:#f7f5fb;
+--gold:#b59b63;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:Inter,sans-serif;
+color:var(--ink);
+background:white;
+line-height:1.8;
+overflow-x:hidden;
+}
+.container{width:min(1200px,92%);margin:auto}
+section{padding:120px 0;position:relative}
+
+h1,h2,h3{
+font-family:"Cormorant Garamond",serif;
+font-weight:600;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+position:relative;
+}
+
+.hero-frame{
+position:absolute;
+inset:38px;
+border:1px solid rgba(71,48,111,.15);
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:760px;
+}
+
+.eyebrow{
+letter-spacing:5px;
+text-transform:uppercase;
+font-size:.8rem;
+color:var(--violet);
+margin-bottom:20px;
+}
+
+h1{
+font-size:clamp(4.5rem,9vw,8rem);
+line-height:.88;
+margin-bottom:25px;
+}
+
+.lead{
+font-size:1.15rem;
+max-width:620px;
+}
+
+.cta{
+display:inline-block;
+margin-top:35px;
+padding:14px 30px;
+text-decoration:none;
+border:1px solid var(--violet);
+color:var(--violet);
+transition:.3s;
+}
+
+.cta:hover{
+background:var(--violet);
+color:white;
+}
+
+.mandala{
+position:absolute;
+right:-120px;
+top:50%;
+transform:translateY(-50%);
+width:900px;
+height:900px;
+opacity:.09;
+}
+
+.section-mark{
+text-align:center;
+margin-bottom:18px;
+color:var(--gold);
+font-size:22px;
+letter-spacing:8px;
+}
+
+h2{
+font-size:3.4rem;
+text-align:center;
+margin-bottom:20px;
+}
+
+.intro{
+max-width:820px;
+margin:0 auto 60px;
+text-align:center;
+}
+
+.about{
+background:linear-gradient(to bottom,#fff,var(--mist));
+}
+
+.people{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+}
+
+.person{
+text-align:center;
+}
+
+.photo-shell{
+padding:18px;
+position:relative;
+}
+
+.photo-shell:before{
+content:"";
+position:absolute;
+inset:0;
+border:1px solid rgba(71,48,111,.25);
+border-radius:30px;
+}
+
+.photo-shell:after{
+content:"◈";
+position:absolute;
+top:12px;
+right:18px;
+color:var(--gold);
+}
+
+.person img{
+width:100%;
+aspect-ratio:4/5;
+object-fit:cover;
+border-radius:24px;
+display:block;
+}
+
+.person h3{
+font-size:2rem;
+margin-top:20px;
+color:var(--violet);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+padding:40px;
+border-radius:26px;
+background:white;
+border:1px solid rgba(71,48,111,.12);
+position:relative;
+overflow:hidden;
+}
+
+.card:before{
+content:"";
+position:absolute;
+width:160px;
+height:160px;
+border:1px solid rgba(181,155,99,.2);
+border-radius:50%;
+top:-80px;
+right:-80px;
+}
+
+.card h3{
+color:var(--violet);
+margin-bottom:12px;
+font-size:2rem;
+}
+
+.quote{
+background:var(--mist);
+text-align:center;
+}
+
+.quote .text{
+font-family:"Cormorant Garamond",serif;
+font-size:2.4rem;
+max-width:900px;
+margin:auto;
+color:var(--violet);
+}
+
+.contact-box{
+max-width:760px;
+margin:auto;
+padding:60px;
+border-radius:30px;
+background:white;
+border:1px solid rgba(71,48,111,.12);
+text-align:center;
+}
+
+.email{
+font-size:1.25rem;
+color:var(--violet);
+margin-top:20px;
+}
+
+footer{
+padding:50px;
+text-align:center;
+color:#777;
+}
+
+.divider{
+height:90px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.divider svg{
+width:180px;
+opacity:.7;
+}
+
+@media(max-width:900px){
+.people,.cards{grid-template-columns:1fr}
+.hero-frame{display:none}
+.mandala{width:600px;height:600px;right:-250px}
+section{padding:90px 0}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="hero-frame"></div>
+
+<svg class="mandala" viewBox="0 0 800 800">
+<g fill="none" stroke="#47306f" stroke-width="1">
+<circle cx="400" cy="400" r="320"/>
+<circle cx="400" cy="400" r="260"/>
+<circle cx="400" cy="400" r="200"/>
+<circle cx="400" cy="400" r="140"/>
+<polygon points="400,80 720,400 400,720 80,400"/>
+<polygon points="400,120 680,400 400,680 120,400"/>
+<line x1="400" y1="40" x2="400" y2="760"/>
+<line x1="40" y1="400" x2="760" y2="400"/>
+<line x1="145" y1="145" x2="655" y2="655"/>
+<line x1="655" y1="145" x2="145" y2="655"/>
+</g>
+</svg>
+
+<div class="container">
+<div class="hero-content">
+<div class="eyebrow">Sesje rozwoju duchowego</div>
+<h1>Penetracja<br>Ego</h1>
+<p class="lead">
+Przestrzeń dla osób poszukujących głębszego kontaktu ze sobą, zrozumienia własnych mechanizmów i świadomej transformacji.
+</p>
+<a href="#kontakt" class="cta">Skontaktuj się z nami</a>
+</div>
+</div>
+</section>
+
+<div class="divider">
+<svg viewBox="0 0 200 40">
+<path d="M20 20 H80 M120 20 H180" stroke="#b59b63"/>
+<circle cx="100" cy="20" r="10" fill="none" stroke="#b59b63"/>
+</svg>
+</div>
+
+<section class="about">
+<div class="container">
+<div class="section-mark">◈ ◇ ◈</div>
+<h2>Poznaj nas</h2>
+<p class="intro">Tworzymy wspólną przestrzeń do rozmowy, refleksji i pracy z tym, co znajduje się pod powierzchnią codziennych doświadczeń.</p>
+
+<div class="people">
+<div class="person">
+<div class="photo-shell">
+<img src="osoba1.jpg" alt="Osoba 1">
+</div>
+<h3>Imię i nazwisko</h3>
+<p>Uzupełnij własny opis.</p>
+</div>
+
+<div class="person">
+<div class="photo-shell">
+<img src="osoba2.jpg" alt="Osoba 2">
+</div>
+<h3>Imię i nazwisko</h3>
+<p>Uzupełnij własny opis.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-mark">✦ ◎ ✦</div>
+<h2>Nasza oferta</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Sesje indywidualne</h3>
+<p>Rozmowa, refleksja i praca z aktualnymi wyzwaniami.</p>
+</div>
+
+<div class="card">
+<h3>Praca z cieniem</h3>
+<p>Odkrywanie wzorców i przekonań wpływających na codzienne decyzje.</p>
+</div>
+
+<div class="card">
+<h3>Rozwój świadomości</h3>
+<p>Pogłębianie kontaktu z intuicją oraz własną ścieżką rozwoju.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="quote">
+<div class="container">
+<div class="section-mark">◈ ◇ ◈</div>
+<div class="text">
+„To, co próbujemy odrzucić, często zawiera klucz do naszego rozwoju.”
+</div>
+</div>
+</section>
+
+<section id="kontakt">
+<div class="container">
+<div class="section-mark">✦ ◎ ✦</div>
+<h2>Kontakt</h2>
+
+<div class="contact-box">
+<p>Jeżeli czujesz, że to właściwy moment, napisz do nas.</p>
+<div class="email">kontakt@penetracjaego.pl</div>
+<p>Instagram: @penetracjaego</p>
+</div>
+</div>
+</section>
+
+<footer>© Penetracja Ego</footer>
+</body>
+</html>
