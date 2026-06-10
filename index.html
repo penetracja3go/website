@@ -323,6 +323,71 @@ margin-bottom:15px;
 .feature-card p{
 line-height:1.7;
 }
+  .pricing{
+background:white;
+}
+
+.offer-category{
+margin-bottom:80px;
+}
+
+.offer-category h3{
+text-align:center;
+font-size:2.3rem;
+margin-bottom:40px;
+color:#47306f;
+font-family:"Cormorant Garamond",serif;
+}
+
+.pricing-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:35px;
+}
+
+.price-card{
+background:white;
+border:1px solid rgba(71,48,111,.12);
+border-radius:28px;
+padding:40px;
+position:relative;
+}
+
+.price-card::before{
+content:"◈";
+position:absolute;
+top:20px;
+right:22px;
+color:#b59b63;
+}
+
+.price{
+font-size:2rem;
+font-family:"Cormorant Garamond",serif;
+color:#47306f;
+margin:10px 0 25px;
+}
+
+.price-card h4{
+font-size:2rem;
+font-family:"Cormorant Garamond",serif;
+color:#47306f;
+margin-bottom:5px;
+}
+
+.price-card p{
+margin-bottom:15px;
+}
+
+.price-card ul{
+padding-left:20px;
+margin-top:10px;
+}
+
+.price-card li{
+margin-bottom:10px;
+}
+
 </style>
 </head>
 <body>
@@ -515,28 +580,122 @@ Sesja z Nami to przekaz ucieleśnionej świadomości, która automatycznie aktyw
 
 </section>
 
-<section>
+<section class="pricing">
+
 <div class="container">
-<div class="section-mark">✦ ◎ ✦</div>
-<h2>Nasza oferta</h2>
 
-<div class="cards">
-<div class="card">
-<h3>Sesje indywidualne</h3>
-<p>Rozmowa, refleksja i praca z aktualnymi wyzwaniami.</p>
+<div class="section-mark">◈ ◇ ◈</div>
+
+<h2>Oferta i Cennik</h2>
+
+<div class="offer-category">
+
+<h3>Spotkania Online</h3>
+
+<div class="pricing-grid">
+
+<div class="price-card">
+
+<h4>Sesja indywidualna</h4>
+
+<div class="price">700 zł</div>
+
+<p>
+Pojedyncza sesja online.
+</p>
+
+<p>
+W cenę sesji wliczony jest odczyt energetyczny, pozwalający pogłębić spojrzenie na Twoją obecną sytuację.
+</p>
+
 </div>
 
-<div class="card">
-<h3>Praca z cieniem</h3>
-<p>Odkrywanie wzorców i przekonań wpływających na codzienne decyzje.</p>
+<div class="price-card">
+
+<h4>Mentoring</h4>
+
+<div class="price">2000 zł / miesiąc</div>
+
+<ul>
+<li>Płatność comiesięczna</li>
+<li>4 miesiące współpracy</li>
+<li>2 sesje online miesięcznie</li>
+<li>Kontakt przez Telegram od poniedziałku do piątku</li>
+<li>Pełen proces</li>
+</ul>
+
 </div>
 
-<div class="card">
-<h3>Rozwój świadomości</h3>
-<p>Pogłębianie kontaktu z intuicją oraz własną ścieżką rozwoju.</p>
 </div>
+
 </div>
+
+<div class="offer-category">
+
+<h3>Odczyty Energetyczne</h3>
+
+<p style="text-align:center;margin-bottom:35px;">
+Telegram • nagrania głosowe
+</p>
+
+<div class="pricing-grid">
+
+<div class="price-card">
+
+<h4>Relacje</h4>
+
+<div class="price">550 zł</div>
+
+<p><strong>Podświadoma gra energetyczna Twojej relacji</strong></p>
+
+<p>
+Odczytujemy mechanizmy podświadomości kreujące Waszą relację.
+</p>
+
+<p>
+Wyciągamy na poziom świadomy to, co definiuje role, jakie wobec siebie odgrywacie i tworzy niekorzystną dynamikę.
+</p>
+
+<p>
+Proces wspiera transformację relacji ku większej harmonii i dojrzałości.
+</p>
+
+<p>
+Odczyty również dla singli szukających drogi ku zdrowej relacji.
+</p>
+
 </div>
+
+<div class="price-card">
+
+<h4>Śmierć i Odrodzenie</h4>
+
+<div class="price">550 zł</div>
+
+<p><strong>Instrukcja obsługi Twojego potencjału</strong></p>
+
+<p>
+Odczytujemy proces transformacji, który obecnie przechodzisz.
+</p>
+
+<p>
+Pokazujemy skórę starego JA oraz nowe JA, które chce się spod niej wyłonić.
+</p>
+
+<p>
+Zyskujesz klarowność dotyczącą aktualnego etapu życia oraz otwierasz się na transformację zgodną z własną esencją.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 </section>
 
 <section class="quote">
