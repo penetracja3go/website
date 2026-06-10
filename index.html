@@ -285,6 +285,44 @@ text-align:center;
 .mission-box p:last-child{
 margin-bottom:0;
 }
+  .features{
+background:#f7f5fb;
+}
+
+.features-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.feature-card{
+background:white;
+padding:40px;
+border-radius:24px;
+border:1px solid rgba(71,48,111,.12);
+position:relative;
+}
+
+.feature-card::before{
+content:"◈";
+position:absolute;
+top:18px;
+right:20px;
+color:#b59b63;
+font-size:18px;
+}
+
+.feature-card h3{
+font-family:"Cormorant Garamond",serif;
+font-size:1.8rem;
+color:#47306f;
+margin-bottom:15px;
+}
+
+.feature-card p{
+line-height:1.7;
+}
 </style>
 </head>
 <body>
