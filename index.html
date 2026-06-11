@@ -973,5 +973,30 @@ Telegram
 </section>
 
 <footer>© Penetracja Ego</footer>
+  <script>
+const reviews = document.querySelectorAll('.testimonial-card');
+let reviewIndex = 0;
+
+function showReview(index){
+reviews.forEach(card => card.classList.remove('active'));
+reviews[index].classList.add('active');
+}
+
+document.getElementById('nextReview').addEventListener('click', () => {
+reviewIndex = (reviewIndex + 1) % reviews.length;
+showReview(reviewIndex);
+});
+
+document.getElementById('prevReview').addEventListener('click', () => {
+reviewIndex = (reviewIndex - 1 + reviews.length) % reviews.length;
+showReview(reviewIndex);
+});
+
+setInterval(() => {
+reviewIndex = (reviewIndex + 1) % reviews.length;
+showReview(reviewIndex);
+}, 7000);
+</script>
+
 </body>
 </html>
